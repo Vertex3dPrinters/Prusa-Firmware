@@ -802,7 +802,7 @@ int uart_putchar(char c, FILE *)
 void lcd_splash()
 {
 	lcd_clear(); // clears display and homes screen
-	lcd_puts_P(PSTR("\n Original Prusa i3\n   Prusa Research"));
+	lcd_puts_P(PSTR("\n    VERTEX MK3S+\n    vertex3d.org"));
 }
 
 
