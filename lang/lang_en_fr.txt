@@ -431,8 +431,8 @@
 "Chauffe"
 
 #MSG_WIZARD_WELCOME c=20 r=7
-"Hi, I am your Original Prusa i3 printer. Would you like me to guide you through the setup process?"
-"Bonjour, je suis votre imprimante Original Prusa i3. Voulez-vous que je vous guide a travers le processus d'installation?"
+"Hi, I am your Vertex Prusa i3 printer. Would you like me to guide you through the setup process?"
+"Bonjour, je suis votre imprimante Vertex Prusa i3. Voulez-vous que je vous guide a travers le processus d'installation?"
 
 #MSG_PRUSA3D_HOWTO
 "howto.prusa3d.com"
@@ -519,8 +519,8 @@
 "Echecs derniere imp."
 
 #MSG_WIZARD_WELCOME_SHIPPING c=20 r=16
-"Hi, I am your Original Prusa i3 printer. I will guide you through a short setup process, in which the Z-axis will be calibrated. Then, you will be ready to print."
-"Bonjour, je suis votre imprimante Original Prusa i3. Je vais vous accompagner au cours d'un bref processus de reglage, qui permettra de calibrer le Z-axis. Apres cela, tout sera pret pour imprimer."
+"Hi, I am your Vertex Prusa i3 printer. I will guide you through a short setup process, in which the Z-axis will be calibrated. Then, you will be ready to print."
+"Bonjour, je suis votre imprimante Vertex Prusa i3. Je vais vous accompagner au cours d'un bref processus de reglage, qui permettra de calibrer le Z-axis. Apres cela, tout sera pret pour imprimer."
 
 #
 "If you have additional steel sheets, calibrate their presets in Settings - HW Setup - Steel sheets."

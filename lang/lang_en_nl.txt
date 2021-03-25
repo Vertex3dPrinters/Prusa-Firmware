@@ -431,8 +431,8 @@
 "Opwarmen"
 
 #MSG_WIZARD_WELCOME c=20 r=7
-"Hi, I am your Original Prusa i3 printer. Would you like me to guide you through the setup process?"
-"Hallo, ik ben uw Original Prusa i3 printer. Zullen we beginnen met het installatieproces?"
+"Hi, I am your Vertex Prusa i3 printer. Would you like me to guide you through the setup process?"
+"Hallo, ik ben uw Vertex Prusa i3 printer. Zullen we beginnen met het installatieproces?"
 
 #MSG_PRUSA3D_HOWTO
 "howto.prusa3d.com"
@@ -519,7 +519,7 @@
 "Laatste printfouten"
 
 #MSG_WIZARD_WELCOME_SHIPPING c=20 r=16
-"Hi, I am your Original Prusa i3 printer. I will guide you through a short setup process, in which the Z-axis will be calibrated. Then, you will be ready to print."
+"Hi, I am your Vertex Prusa i3 printer. I will guide you through a short setup process, in which the Z-axis will be calibrated. Then, you will be ready to print."
 "Hallo, ik ben je originele Prusa i3-printer. Ik zal je door een snel instellingsproces leiden dat de Z-as zal kalibreren. Dan ben je klaar om te printen."
 
 #

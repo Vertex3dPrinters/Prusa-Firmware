@@ -537,8 +537,8 @@ msgstr "Opwarmen"
 
 # MSG_WIZARD_WELCOME c=20 r=7
 #: ultralcd.cpp:5021
-msgid "Hi, I am your Original Prusa i3 printer. Would you like me to guide you through the setup process?"
-msgstr "Hallo, ik ben uw Original Prusa i3 printer. Zullen we beginnen met het installatieproces?"
+msgid "Hi, I am your Vertex Prusa i3 printer. Would you like me to guide you through the setup process?"
+msgstr "Hallo, ik ben uw Vertex Prusa i3 printer. Zullen we beginnen met het installatieproces?"
 
 # MSG_PRUSA3D_HOWTO
 #: ultralcd.cpp:2158
