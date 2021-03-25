@@ -3116,7 +3116,7 @@ bool gcode_M45(bool onlyZ, int8_t verbosity_level)
 //#ifndef NEW_XYZCAL
 				if (result >= 0)
 				{
-					#ifdef HEATBED_V2
+					#if defined(HEATBED_V2) || defined(HEATBED_CS)
 					sample_z();
 					#else //HEATBED_V2
 					point_too_far_mask = 0;
@@ -3134,7 +3134,7 @@ bool gcode_M45(bool onlyZ, int8_t verbosity_level)
 					plan_buffer_line_curposXYZE(homing_feedrate[Z_AXIS] / 40);
 					st_synchronize();
 					// if (result >= 0) babystep_apply();					
-					#endif //HEATBED_V2
+					#endif //HEATBED_V2 || HEATBED_CS
 				}
 //#endif //NEW_XYZCAL
 				lcd_update_enable(true);
@@ -3216,7 +3216,7 @@ template<typename T>
 static T gcode_M600_filament_change_z_shift()
 {
 #ifdef FILAMENTCHANGE_ZADD
-	static_assert(Z_MAX_POS < (255 - FILAMENTCHANGE_ZADD), "Z-range too high, change the T type from uint8_t to uint16_t");
+	static_assert(Z_MAX_POS < (Z_MAX_POS +45 - FILAMENTCHANGE_ZADD), "Z-range too high, change the T type from uint8_t to uint16_t");
 	// avoid floating point arithmetics when not necessary - results in shorter code
 	T ztmp = T( current_position[Z_AXIS] );
 	T z_shift = 0;
