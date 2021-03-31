@@ -871,7 +871,7 @@ void show_fw_version_warnings() {
 //! @brief try to check if firmware is on right type of printer
 static void check_if_fw_is_on_right_printer(){
 #ifdef FILAMENT_SENSOR
-  if((PRINTER_TYPE == PRINTER_MK3) || (PRINTER_TYPE == PRINTER_MK3S)){
+  if((PRINTER_TYPE == PRINTER_MK3) || (PRINTER_TYPE == PRINTER_MK3S) || (PRINTER_TYPE == PRINTER_VERTEX_MK3S) || (PRINTER_TYPE == PRINTER_VERTEX_XL)){
     #ifdef IR_SENSOR
       if (pat9125_probe()){
         lcd_show_fullscreen_message_and_wait_P(_i("MK3S firmware detected on MK3 printer"));}////c=20 r=3
