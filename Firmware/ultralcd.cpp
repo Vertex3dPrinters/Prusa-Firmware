@@ -1916,9 +1916,13 @@ static void lcd_support_menu()
       MENU_ITEM_BACK_P(PSTR("FW - " FW_version));
   }*/
       
-  MENU_ITEM_BACK_P(_n("prusa3d.com"));////MSG_PRUSA3D c=18
-  MENU_ITEM_BACK_P(_n("forum.prusa3d.com"));////MSG_PRUSA3D_FORUM c=18
-  MENU_ITEM_BACK_P(_n("howto.prusa3d.com"));////MSG_PRUSA3D_HOWTO c=18
+  MENU_ITEM_BACK_P(PSTR(ADAPTED_BY));    
+  MENU_ITEM_BACK_P(PSTR("GITHUB:"));
+  MENU_ITEM_BACK_P(PSTR("Vertex3dPrinters"));
+  MENU_ITEM_BACK_P(PSTR("Telegram channel:"));
+  MENU_ITEM_BACK_P(PSTR("vertex3despanol"));
+  MENU_ITEM_BACK_P(PSTR("Forked from:"));
+  MENU_ITEM_BACK_P(PSTR("PRUSA3D GITHUB"));
   MENU_ITEM_BACK_P(STR_SEPARATOR);
   MENU_ITEM_BACK_P(PSTR(FILAMENT_SIZE));
   MENU_ITEM_BACK_P(PSTR(ELECTRONICS));

@@ -527,7 +527,7 @@ msgstr ""
 
 # MSG_WIZARD_WELCOME c=20 r=7
 #: messages.c:121
-msgid "Hi, I am your Original Prusa i3 printer. Would you like me to guide you through the setup process?"
+msgid "Hi, I am your Vertex printer. Would you like me to guide you through the setup process?"
 msgstr ""
 
 # MSG_FILAMENTCHANGE c=18
@@ -632,7 +632,7 @@ msgstr ""
 
 # MSG_WIZARD_WELCOME_SHIPPING c=20 r=16
 #: messages.c:122
-msgid "Hi, I am your Original Prusa i3 printer. I will guide you through a short setup process, in which the Z-axis will be calibrated. Then, you will be ready to print."
+msgid "Hi, I am your Vertex printer. I will guide you through a short setup process, in which the Z-axis will be calibrated. Then, you will be ready to print."
 msgstr ""
 
 # MSG_ADDITIONAL_SHEETS c=20 r=9

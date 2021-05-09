@@ -527,8 +527,8 @@ msgstr "Zahrivani"
 
 # MSG_WIZARD_WELCOME c=20 r=7
 #: messages.c:121
-msgid "Hi, I am your Original Prusa i3 printer. Would you like me to guide you through the setup process?"
-msgstr "Dobry den, jsem vase tiskarna Original Prusa i3. Chcete abych Vas provedla kalibracnim procesem?"
+msgid "Hi, I am your Vertex printer. Would you like me to guide you through the setup process?"
+msgstr "Dobry den, jsem vase tiskarna Vertex. Chcete abych Vas provedla kalibracnim procesem?"
 
 # MSG_FILAMENTCHANGE c=18
 #: messages.c:43
@@ -632,8 +632,8 @@ msgstr "Selhani posl. tisku"
 
 # MSG_WIZARD_WELCOME_SHIPPING c=20 r=16
 #: messages.c:122
-msgid "Hi, I am your Original Prusa i3 printer. I will guide you through a short setup process, in which the Z-axis will be calibrated. Then, you will be ready to print."
-msgstr "Ahoj, jsem vase tiskarna Original Prusa i3. Provedu vas kratkym procesem nastaveni, ve kterem zkalibrujeme osu Z. Pak budete moct zacit tisknout."
+msgid "Hi, I am your Vertex printer. I will guide you through a short setup process, in which the Z-axis will be calibrated. Then, you will be ready to print."
+msgstr "Ahoj, jsem vase tiskarna Vertex. Provedu vas kratkym procesem nastaveni, ve kterem zkalibrujeme osu Z. Pak budete moct zacit tisknout."
 
 # MSG_ADDITIONAL_SHEETS c=20 r=9
 #: ultralcd.cpp:4950

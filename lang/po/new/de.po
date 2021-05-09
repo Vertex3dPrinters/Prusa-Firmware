@@ -527,8 +527,8 @@ msgstr "Aufwaermen"
 
 # MSG_WIZARD_WELCOME c=20 r=7
 #: messages.c:121
-msgid "Hi, I am your Original Prusa i3 printer. Would you like me to guide you through the setup process?"
-msgstr "Hallo, ich bin Ihr Original Prusa i3 Drucker. Moechten Sie, dass ich Sie durch den Einrich- tungsablauf fuehre?"
+msgid "Hi, I am your Vertex printer. Would you like me to guide you through the setup process?"
+msgstr "Hallo, ich bin Ihr Vertex Drucker. Moechten Sie, dass ich Sie durch den Einrich- tungsablauf fuehre?"
 
 # MSG_FILAMENTCHANGE c=18
 #: messages.c:43
@@ -632,8 +632,8 @@ msgstr "Letzte Druckfehler"
 
 # MSG_WIZARD_WELCOME_SHIPPING c=20 r=16
 #: messages.c:122
-msgid "Hi, I am your Original Prusa i3 printer. I will guide you through a short setup process, in which the Z-axis will be calibrated. Then, you will be ready to print."
-msgstr "Hallo, ich bin Ihr Original Prusa i3 Drucker. Ich werde Sie durch einen kurzen Einrichtungsprozess fuehren, bei dem die Z-Achse kalibriert wird. Danach sind Sie bereit fuer den Druck."
+msgid "Hi, I am your Vertex printer. I will guide you through a short setup process, in which the Z-axis will be calibrated. Then, you will be ready to print."
+msgstr "Hallo, ich bin Ihr Vertex Drucker. Ich werde Sie durch einen kurzen Einrichtungsprozess fuehren, bei dem die Z-Achse kalibriert wird. Danach sind Sie bereit fuer den Druck."
 
 # MSG_ADDITIONAL_SHEETS c=20 r=9
 #: ultralcd.cpp:4950

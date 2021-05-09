@@ -794,7 +794,12 @@ int uart_putchar(char c, FILE *)
 void lcd_splash()
 {
 	lcd_clear(); // clears display and homes screen
-	lcd_puts_P(PSTR("\n Original Prusa i3\n   Prusa Research"));
+  if (PRINTER_TYPE == PRINTER_VERTEX_XL)
+  {
+	  lcd_puts_P(PSTR("\n     VERTEX  XL\n    vertex3d.org"));
+  }else{
+    lcd_puts_P(PSTR("\n    VERTEX MK3S+\n    vertex3d.org"));
+  }
 }
 
 
@@ -2900,7 +2905,7 @@ static void gcode_G28(bool home_x_axis, long home_x_value, bool home_y_axis, lon
       endstops_hit_on_purpose();
 #ifndef MESH_BED_LEVELING
 //-// Oct 2019 :: this part of code is (from) now probably un-compilable
-      // If MESH_BED_LEVELING is not active, then it is the original Prusa i3.
+      // If MESH_BED_LEVELING is not active, then it is the Vertex.
       // Offer the user to load the baby step value, which has been adjusted at the previous print session.
       if(card.sdprinting && eeprom_read_word((uint16_t *)EEPROM_BABYSTEP_Z))
           lcd_adjust_z();
@@ -7925,7 +7930,7 @@ Sigma_Exit:
     /*!
 	### M509 - Force language selection <a href="https://reprap.org/wiki/G-code#M509:_Force_language_selection">M509: Force language selection</a>
 	Resets the language to English.
-	Only on Original Prusa i3 MK2.5/s and MK3/s with multiple languages.
+	Only on Vertex MK2.5/s and MK3/s with multiple languages.
 	*/
     case 509:
     {
