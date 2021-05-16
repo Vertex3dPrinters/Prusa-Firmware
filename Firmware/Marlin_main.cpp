@@ -2239,6 +2239,9 @@ bool calibrate_z_auto()
 	if (PRINTER_TYPE == PRINTER_MK3) {
 		current_position[Z_AXIS] = Z_MAX_POS + 2.0;
 	}
+  else if (PRINTER_TYPE == PRINTER_VERTEX_XL) {
+    current_position[Z_AXIS] = Z_MAX_POS + 7.0;
+  }
 	else {
 		current_position[Z_AXIS] = Z_MAX_POS + 9.0;
 	}
