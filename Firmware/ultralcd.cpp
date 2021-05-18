@@ -7657,8 +7657,8 @@ static bool lcd_selfcheck_axis_sg(unsigned char axis) {
 // each axis length is measured twice	
 	float axis_length, current_position_init, current_position_final;
 	float measured_axis_length[2];
-	float max_error_mm = 5;
 	#ifdef HEATBED_CS	
+	float max_error_mm = 6.5;
 	float margin = AXIS_MARGIN;
 	switch (axis) {
 	case 0: axis_length = X_MAX_POS; break;
@@ -7666,6 +7666,7 @@ static bool lcd_selfcheck_axis_sg(unsigned char axis) {
 	default: axis_length = Z_MAX_POS; break;
 	}
 	#else
+	float max_error_mm = 5;
 	float margin = 60;
 	switch (axis) {
 	case 0: axis_length = X_MAX_POS; break;
