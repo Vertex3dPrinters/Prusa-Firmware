@@ -93,7 +93,7 @@
 /**
  * [0,0] steel sheet print area point Y coordinate in bed print area coordinates
  */
-#define SHEET_PRINT_ZERO_REF_Y 4.f
+#define SHEET_PRINT_ZERO_REF_Y 5.5f
 
 #define DEFAULT_MAX_FEEDRATE                {200, 200, 12, 120}      // (mm/sec)   max feedrate (M203)
 #define DEFAULT_MAX_FEEDRATE_SILENT         {100, 100, 12, 120}      // (mm/sec)   max feedrate (M203), silent mode
@@ -656,10 +656,10 @@
 #define FR_CAL_POINT_X_POSITION 263.0f
 #define RL_CAL_POINT_X_POSITION 38.5f
 #define RR_CAL_POINT_X_POSITION 263.0f
-#define FL_CAL_POINT_Y_POSITION 34.3f
-#define FR_CAL_POINT_Y_POSITION 34.3f
-#define RL_CAL_POINT_Y_POSITION 289.0f
-#define RR_CAL_POINT_Y_POSITION 289.0f
+#define FL_CAL_POINT_Y_POSITION 37.3f
+#define FR_CAL_POINT_Y_POSITION 37.3f
+#define RL_CAL_POINT_Y_POSITION 292.0f
+#define RR_CAL_POINT_Y_POSITION 292.0f
 
 //values for pinda position over calibration points
 // #define FL_PINDA_CAL_X_POSITION 1550
