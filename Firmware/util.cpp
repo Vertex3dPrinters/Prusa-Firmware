@@ -613,9 +613,9 @@ void ip4_to_str(char* dest, uint8_t* IP)
 }
 
 
-void steel_sheet_check()
+void steel_sheet_check(bool bCheckSD)
 { 
-    if (!is_usb_printing)
+    if (bCheckSD)
     {
         const int8_t sheetNR = eeprom_read_byte(&(EEPROM_Sheets_base->active_sheet));
         const int8_t nextSheet = eeprom_next_initialized_sheet(sheetNR);
