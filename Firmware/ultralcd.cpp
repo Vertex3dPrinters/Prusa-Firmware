@@ -4878,6 +4878,9 @@ void lcd_wizard(WizState state)
 			if (wizard_event) state = S::IsFil;
 			else end = true;
 			break;
+		case S::SelectNozzle:
+			
+			break;
 		case S::Z:
 			lcd_show_fullscreen_message_and_wait_P(_i("Please remove shipping helpers first."));////MSG_REMOVE_SHIPPING_HELPERS c=20 r=3
 			lcd_show_fullscreen_message_and_wait_P(_i("Now remove the test print from steel sheet."));////MSG_REMOVE_TEST_PRINT c=20 r=4
