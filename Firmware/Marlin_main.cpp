@@ -8410,7 +8410,10 @@ Sigma_Exit:
       M880
   */
     case 880:
-      steel_sheet_check();
+      if (IS_SD_PRINTING)
+      {
+        steel_sheet_check();
+      }
     break;
 
 
