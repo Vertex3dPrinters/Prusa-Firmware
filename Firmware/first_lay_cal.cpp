@@ -53,6 +53,36 @@ void lay1cal_load_filament(char *cmd_buffer, uint8_t filament)
 
 }
 
+void lay1cal_set_flow()
+{
+    uint16_t nDiameter_um;
+    nDiameter_um=eeprom_read_word((uint16_t*)EEPROM_NOZZLE_DIAMETER_uM);
+
+    switch (nDiameter_um)
+    {
+    case 250:
+        enquecommand_P(PSTR("M221 S62"));
+        break;
+
+    case 400:
+        enquecommand_P(PSTR("M221 S100"));
+        break;
+    
+    case 600:
+        enquecommand_P(PSTR("M221 S150"));
+        break;
+
+    case 800:
+        enquecommand_P(PSTR("M221 S200"));
+        break; 
+
+    default:
+        enquecommand_P(PSTR("M221 S100"));
+        break;
+    }
+    
+}
+
 //! @brief Print intro line
 void lay1cal_intro_line()
 {
