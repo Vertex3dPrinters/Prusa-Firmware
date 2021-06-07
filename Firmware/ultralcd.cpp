@@ -4869,7 +4869,7 @@ void lcd_wizard(WizState state)
 			wizard_event = lcd_selftest();
 			if (wizard_event) {
 				calibration_status_store(CALIBRATION_STATUS_XYZ_CALIBRATION);
-				state = S::Xyz;
+				state = S::SelectNozzle;
 			}
 			else end = true;
 			break;
@@ -4880,7 +4880,9 @@ void lcd_wizard(WizState state)
 			else end = true;
 			break;
 		case S::SelectNozzle:
-			
+			wizard_event = lcd_show_multiscreen_message_two_choices_and_wait_P(_T(MSG_CHOOSE_NOZZLE),false,false,PSTR("0.4mm"),PSTR("0.6mm"));
+			lcd_choose_nozzle_diameter(wizard_event);
+			state = S::Xyz;
 			break;
 		case S::Z:
 			lcd_show_fullscreen_message_and_wait_P(_i("Please remove shipping helpers first."));////MSG_REMOVE_SHIPPING_HELPERS c=20 r=3
@@ -9072,6 +9074,21 @@ void reprint_from_eeprom() {
   	sprintf_P(cmd, PSTR("M24"));
 	enquecommand(cmd);
 	lcd_return_to_status();
+}
+
+void lcd_choose_nozzle_diameter(int8_t nozzleSelection) {
+    uint16_t nDiameter;
+
+	if (!nozzleSelection)
+	{
+    	oNozzleDiameter=ClNozzleDiameter::_Diameter_600;
+    	nDiameter=600;
+	}else{
+		oNozzleDiameter=ClNozzleDiameter::_Diameter_400;
+    	nDiameter=400;
+	}
+	eeprom_update_byte((uint8_t*)EEPROM_NOZZLE_DIAMETER,(uint8_t)oNozzleDiameter);
+    eeprom_update_word((uint16_t*)EEPROM_NOZZLE_DIAMETER_uM,nDiameter);
 }
 
 #ifdef PINDA_TEMP_COMP

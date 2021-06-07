@@ -270,6 +270,7 @@ extern void lcd_experimental_toggle();
 extern void lcd_experimental_menu();
 
 void reprint_from_eeprom();
+void lcd_choose_nozzle_diameter(int8_t nozzleSelection);
 
 #ifdef PINDA_TEMP_COMP
 extern void lcd_pinda_temp_compensation_toggle();
