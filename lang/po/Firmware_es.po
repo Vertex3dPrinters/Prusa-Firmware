@@ -1765,3 +1765,8 @@ msgstr "Corregir-Z:"
 msgid "Z-probe nr."
 msgstr "Z-sensor nr."
 
+#MSG_CHOOSE_NOZZLE c=20
+#: messages.c:208
+msgid "Choose the installed nozzle size:"
+msgstr "Selecciona la dimension del nozzle:"
+

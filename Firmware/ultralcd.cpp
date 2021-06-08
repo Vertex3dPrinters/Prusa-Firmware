@@ -4869,20 +4869,20 @@ void lcd_wizard(WizState state)
 			wizard_event = lcd_selftest();
 			if (wizard_event) {
 				calibration_status_store(CALIBRATION_STATUS_XYZ_CALIBRATION);
-				state = S::SelectNozzle;
+				state = S::Xyz;
 			}
 			else end = true;
 			break;
 		case S::Xyz:
 			lcd_show_fullscreen_message_and_wait_P(_i("I will run xyz calibration now. It will take approx. 12 mins."));////MSG_WIZARD_XYZ_CAL c=20 r=8
 			wizard_event = gcode_M45(false, 0);
-			if (wizard_event) state = S::IsFil;
+			if (wizard_event) state = S::SelectNozzle;
 			else end = true;
 			break;
 		case S::SelectNozzle:
 			wizard_event = lcd_show_multiscreen_message_two_choices_and_wait_P(_T(MSG_CHOOSE_NOZZLE),false,false,PSTR("0.4mm"),PSTR("0.6mm"));
 			lcd_choose_nozzle_diameter(wizard_event);
-			state = S::Xyz;
+			state = S::IsFil;
 			break;
 		case S::Z:
 			lcd_show_fullscreen_message_and_wait_P(_i("Please remove shipping helpers first."));////MSG_REMOVE_SHIPPING_HELPERS c=20 r=3

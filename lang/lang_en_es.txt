@@ -1401,3 +1401,8 @@
 #MSG_PRINTER_IP c=18
 "Printer IP Addr:"
 "Dir. IP impresora:"
+
+#MSG_CHOOSE_NOZZLE c=20
+"Choose the installed nozzle size:"
+"Selecciona la dimension del nozzle:"
+
