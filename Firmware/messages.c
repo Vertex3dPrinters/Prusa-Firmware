@@ -158,6 +158,9 @@ const char MSG_TIMEOUT[] PROGMEM_I1 = ISTR("Timeout"); ////c=12
 const char MSG_BRIGHT[] PROGMEM_I1 = ISTR("Bright"); ////c=6
 const char MSG_DIM[] PROGMEM_I1 = ISTR("Dim"); ////c=6
 const char MSG_AUTO[] PROGMEM_I1 = ISTR("Auto"); ////c=6
+const char MSG_CHECK_STEEL_SHEET[] PROGMEM_I1 = ISTR("Check the steel sheet installed"); ////c=31
+const char MSG_CHOOSE_NOZZLE[] PROGMEM_I1 = ISTR("Choose the installed nozzle size:"); ////c=33
+const char MSG_REPRINT[] PROGMEM_I1 = ISTR("REPRINT"); ////c=7
 #ifdef IR_SENSOR_ANALOG
 // Beware - the space at the beginning is necessary since it is reused in LCD menu items which are to be with a space
 const char MSG_IR_04_OR_NEWER[] PROGMEM_I1 = ISTR(" 0.4 or newer");////c=18
@@ -204,5 +207,5 @@ const char MSG_M112_KILL[] PROGMEM_N1 = "M112 called. Emergency Stop."; ////c=20
 const char MSG_ADVANCE_K[] PROGMEM_N1 = "Advance K:"; ////c=13
 const char MSG_POWERPANIC_DETECTED[] PROGMEM_N1 = "POWER PANIC DETECTED"; ////c=20
 const char MSG_LCD_STATUS_CHANGED[] PROGMEM_N1 = "LCD status changed";
-const char MSG_CHECK_STEEL_SHEET[] PROGMEM_I1 = ISTR("Check the steel sheet installed");
-const char MSG_CHOOSE_NOZZLE[] PROGMEM_I1 = ISTR("Choose the installed nozzle size:"); ////c=33
+const char MSG_NOZZLE_06[] PROGMEM_N1 = "0.6mm";
+const char MSG_NOZZLE_04[] PROGMEM_N1 = "0.4mm";

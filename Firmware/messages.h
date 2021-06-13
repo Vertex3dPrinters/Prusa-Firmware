@@ -206,6 +206,9 @@ extern const char MSG_POWERPANIC_DETECTED[];
 extern const char MSG_LCD_STATUS_CHANGED[];
 extern const char MSG_CHECK_STEEL_SHEET[];
 extern const char MSG_CHOOSE_NOZZLE[];
+extern const char MSG_NOZZLE_06[];
+extern const char MSG_NOZZLE_04[];
+extern const char MSG_REPRINT[];
 
 #if defined(__cplusplus)
 }

@@ -4880,7 +4880,7 @@ void lcd_wizard(WizState state)
 			else end = true;
 			break;
 		case S::SelectNozzle:
-			wizard_event = lcd_show_multiscreen_message_two_choices_and_wait_P(_T(MSG_CHOOSE_NOZZLE),false,false,PSTR("0.4mm"),PSTR("0.6mm"));
+			wizard_event = lcd_show_fullscreen_message_two_choices_wait_P(_T(MSG_CHOOSE_NOZZLE),false,false,MSG_NOZZLE_04,MSG_NOZZLE_06);
 			lcd_choose_nozzle_diameter(wizard_event);
 			state = S::IsFil;
 			break;
@@ -6575,7 +6575,7 @@ static void lcd_main_menu()
 
 	if ( (!PRINTER_ACTIVE) && enableReprint && card.cardOK)
   	{
-		MENU_ITEM_SUBMENU_P(_i("Reprint"), reprint_from_eeprom);
+		MENU_ITEM_SUBMENU_P(_T(MSG_REPRINT), reprint_from_eeprom);
   	}else if (!card.cardOK)
 	  {	  //If the user remove the SD card the reprint will be disabled because you can't be sure that the gcode file will remain in the SD
 		  enableReprint = false; 
@@ -9089,6 +9089,74 @@ void lcd_choose_nozzle_diameter(int8_t nozzleSelection) {
 	}
 	eeprom_update_byte((uint8_t*)EEPROM_NOZZLE_DIAMETER,(uint8_t)oNozzleDiameter);
     eeprom_update_word((uint16_t*)EEPROM_NOZZLE_DIAMETER_uM,nDiameter);
+}
+
+
+//! @brief Show single screen message with yes and no possible choices and wait with possible timeout
+//! @param msg Message to show
+//! @param allow_timeouting if true, allows time outing of the screen
+//! @param default_first if true, first choice is selected by default, otherwise second choice is preselected
+//! @param first_choice first message
+//! @param second_choice second message
+//! @retval 1 first choice selected by user
+//! @retval 0 second choice selected by user
+//! @retval -1 screen timed out
+int8_t lcd_show_fullscreen_message_two_choices_wait_P(const char *msg, bool allow_timeouting, bool default_first,
+        const char *first_choice, const char *second_choice)
+{
+
+	lcd_display_message_fullscreen_P(msg);
+	
+	if (default_first) {
+		lcd_putc_at(0, 2, '>');
+		lcd_puts_P(first_choice);
+		lcd_puts_at_P(1, 3, second_choice);
+	}
+	else {
+		lcd_puts_at_P(1, 2, first_choice);
+		lcd_putc_at(0, 3, '>');
+		lcd_puts_P(second_choice);
+	}
+	int8_t retval = default_first ? true : false;
+
+	// Wait for user confirmation or a timeout.
+	unsigned long previous_millis_cmd = _millis();
+	int8_t        enc_dif = lcd_encoder_diff;
+	lcd_consume_click();
+	KEEPALIVE_STATE(PAUSED_FOR_USER);
+	for (;;) {
+		if (allow_timeouting && _millis() - previous_millis_cmd > LCD_TIMEOUT_TO_STATUS)
+		{
+		    retval = -1;
+		    break;
+		}
+		manage_heater();
+		manage_inactivity(true);
+		if (abs(enc_dif - lcd_encoder_diff) > 4) {
+			lcd_set_cursor(0, 2);
+				if (enc_dif < lcd_encoder_diff && retval) {
+					lcd_print(' ');
+					lcd_putc_at(0, 3, '>');
+					retval = 0;
+					Sound_MakeSound(e_SOUND_TYPE_EncoderMove);
+
+				}
+				else if (enc_dif > lcd_encoder_diff && !retval) {
+					lcd_print('>');
+					lcd_putc_at(0, 3, ' ');
+					retval = 1;
+					Sound_MakeSound(e_SOUND_TYPE_EncoderMove);
+				}
+				enc_dif = lcd_encoder_diff;
+		}
+		if (lcd_clicked()) {
+			Sound_MakeSound(e_SOUND_TYPE_ButtonEcho);
+			KEEPALIVE_STATE(IN_HANDLER);
+			break;
+		}
+	}
+    lcd_encoder_diff = 0;
+    return retval;
 }
 
 #ifdef PINDA_TEMP_COMP

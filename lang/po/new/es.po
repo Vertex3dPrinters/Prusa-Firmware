@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 # MSG_IR_03_OR_OLDER c=18
-#: messages.c:164
+#: messages.c:167
 msgid " 0.3 or older"
 msgstr " 0.3 o mayor"
 
@@ -26,7 +26,7 @@ msgid "FS v0.3 or older"
 msgstr "FS 0.3 o mayor"
 
 # MSG_IR_04_OR_NEWER c=18
-#: messages.c:163
+#: messages.c:166
 msgid " 0.4 or newer"
 msgstr " 0.4 o mas nueva"
 
@@ -36,7 +36,7 @@ msgid "FS v0.4 or newer"
 msgstr "FS 0.4 o mas nueva"
 
 # MSG_IR_UNKNOWN c=18
-#: messages.c:165
+#: messages.c:168
 msgid "unknown state"
 msgstr "estado desconocido"
 
@@ -1765,8 +1765,17 @@ msgstr "Corregir-Z:"
 msgid "Z-probe nr."
 msgstr "Z-sensor nr."
 
-#MSG_CHOOSE_NOZZLE c=20
-#: messages.c:208
+#MSG_CHOOSE_NOZZLE c=32 r=2
+#: messages.c:162
 msgid "Choose the installed nozzle size:"
-msgstr "Selecciona la dimension del nozzle:"
+msgstr "Selecciona el tamano del nozzle:"
 
+#MSG_REPRINT c=10
+#: messages.c:163
+msgid "REPRINT"
+msgstr "REIMPRIMIR"
+
+#MSG_CHECK_STEEL_SHEET c=28 r=2
+#: messages.c:161
+msgid "Check the steel sheet installed"
+msgstr "Chequea la plancha instalada"

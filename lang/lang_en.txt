@@ -1050,3 +1050,12 @@
 
 #MSG_PRINTER_IP c=18
 "Printer IP Addr:"
+
+#MSG_CHOOSE_NOZZLE c=33
+"Choose the installed nozzle size:"
+
+#MSG_REPRINT c=7
+"REPRINT"
+
+#MSG_CHECK_STEEL_SHEET c=31
+"Check the steel sheet installed"
