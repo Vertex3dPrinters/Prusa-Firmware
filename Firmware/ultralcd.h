@@ -252,6 +252,7 @@ enum class WizState : uint8_t
     Xyz,            //!< xyz calibration
     Z,              //!< z calibration
     SelectNozzle,   //!< Select the nozzle size
+    VertexValues,   //!< Set predefined VERTEX values (mesh nr points, not ignore magnets, probe nr)
     IsFil,          //!< Is filament loaded? First step of 1st layer calibration
     PreheatPla,     //!< waiting for preheat nozzle for PLA
     Preheat,        //!< Preheat for any material
@@ -274,6 +275,7 @@ void lcd_choose_nozzle_diameter(int8_t nozzleSelection);
 void lcd_test_nozzle_selection();
 int8_t lcd_show_fullscreen_message_two_choices_wait_P(const char *msg, bool allow_timeouting, bool default_first, 
 const char *first_choice, const char *second_choice);
+void setVertexValues();
 
 #ifdef PINDA_TEMP_COMP
 extern void lcd_pinda_temp_compensation_toggle();

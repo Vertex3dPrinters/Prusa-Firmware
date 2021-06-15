@@ -1765,17 +1765,17 @@ msgstr "Corregir-Z:"
 msgid "Z-probe nr."
 msgstr "Z-sensor nr."
 
-#MSG_CHOOSE_NOZZLE c=32 r=2
+#MSG_CHOOSE_NOZZLE c=33 r=2
 #: messages.c:162
 msgid "Choose the installed nozzle size:"
 msgstr "Selecciona el tamano del nozzle:"
 
 #MSG_REPRINT c=10
 #: messages.c:163
-msgid "REPRINT"
-msgstr "REIMPRIMIR"
+msgid "Reprint"
+msgstr "Reimprimir"
 
-#MSG_CHECK_STEEL_SHEET c=28 r=2
+#MSG_CHECK_STEEL_SHEET c=31 r=2
 #: messages.c:161
 msgid "Check the steel sheet installed"
 msgstr "Chequea la plancha instalada"

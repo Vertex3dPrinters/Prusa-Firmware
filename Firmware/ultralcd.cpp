@@ -4882,6 +4882,10 @@ void lcd_wizard(WizState state)
 		case S::SelectNozzle:
 			wizard_event = lcd_show_fullscreen_message_two_choices_wait_P(_T(MSG_CHOOSE_NOZZLE),false,false,MSG_NOZZLE_04,MSG_NOZZLE_06);
 			lcd_choose_nozzle_diameter(wizard_event);
+			state = S::VertexValues;
+			break;
+		case S::VertexValues:
+			setVertexValues();
 			state = S::IsFil;
 			break;
 		case S::Z:
@@ -9157,6 +9161,16 @@ int8_t lcd_show_fullscreen_message_two_choices_wait_P(const char *msg, bool allo
 	}
     lcd_encoder_diff = 0;
     return retval;
+}
+
+void setVertexValues()
+{
+	oFsensorActionNA=ClFsensorActionNA::_Pause;
+    
+	eeprom_update_byte((uint8_t*)EEPROM_FSENSOR_ACTION_NA,(uint8_t)oFsensorActionNA);
+	eeprom_update_byte((uint8_t*)EEPROM_MBL_POINTS_NR, 7);
+	eeprom_update_byte((uint8_t*)EEPROM_MBL_MAGNET_ELIMINATION, 0);
+	eeprom_update_byte((uint8_t*)EEPROM_MBL_PROBE_NR, 5);
 }
 
 #ifdef PINDA_TEMP_COMP

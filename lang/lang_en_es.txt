@@ -1402,14 +1402,14 @@
 "Printer IP Addr:"
 "Dir. IP impresora:"
 
-#MSG_CHOOSE_NOZZLE c=32
+#MSG_CHOOSE_NOZZLE c=33
 "Choose the installed nozzle size:"
 "Selecciona el tamano del nozzle:"
 
 #MSG_REPRINT c=10
-"REPRINT"
-"REIMPRIMIR"
+"Reprint"
+"Reimprimir"
 
-#MSG_CHECK_STEEL_SHEET c=28
+#MSG_CHECK_STEEL_SHEET c=31
 "Check the steel sheet installed"
 "Chequea la plancha instalada"
