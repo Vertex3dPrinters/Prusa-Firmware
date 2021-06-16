@@ -159,7 +159,7 @@ const char MSG_BRIGHT[] PROGMEM_I1 = ISTR("Bright"); ////c=6
 const char MSG_DIM[] PROGMEM_I1 = ISTR("Dim"); ////c=6
 const char MSG_AUTO[] PROGMEM_I1 = ISTR("Auto"); ////c=6
 const char MSG_CHECK_STEEL_SHEET[] PROGMEM_I1 = ISTR("Check the steel sheet installed"); ////c=31
-const char MSG_CHOOSE_NOZZLE[] PROGMEM_I1 = ISTR("Choose the installed nozzle size:"); ////c=33
+const char MSG_CHOOSE_NOZZLE[] PROGMEM_I1 = ISTR("Choose the nozzle size:"); ////c=33
 const char MSG_REPRINT[] PROGMEM_I1 = ISTR("Reprint"); ////c=7
 #ifdef IR_SENSOR_ANALOG
 // Beware - the space at the beginning is necessary since it is reused in LCD menu items which are to be with a space

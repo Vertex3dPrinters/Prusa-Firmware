@@ -40,12 +40,12 @@ clean_lang()
 echo "lang-clean.sh started" >&2
 
 clean_lang en
-clean_lang cz
+#clean_lang cz
 clean_lang de
 clean_lang es
 clean_lang fr
 clean_lang it
-clean_lang pl
+#clean_lang pl
 #Community language support
 #Dutch
 clean_lang nl

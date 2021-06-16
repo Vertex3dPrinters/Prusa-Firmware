@@ -1052,7 +1052,7 @@
 "Printer IP Addr:"
 
 #MSG_CHOOSE_NOZZLE c=33
-"Choose the installed nozzle size:"
+"Choose the nozzle size:"
 
 #MSG_REPRINT c=7
 "Reprint"

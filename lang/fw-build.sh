@@ -133,11 +133,11 @@ if [ ! -z "$LNG" ]; then
  finish 0
 else
  echo "Updating languages:" >&2
- if [ -e lang_cz.bin ]; then
-  echo -n " Czech  : " >&2
-  ./update_lang.sh cz 2>./update_lang_cz.out 1>/dev/null
-  if [ $? -eq 0 ]; then echo 'OK' >&2; else echo 'NG!' >&2; finish 1; fi
- fi
+ #if [ -e lang_cz.bin ]; then
+ # echo -n " Czech  : " >&2
+ # ./update_lang.sh cz 2>./update_lang_cz.out 1>/dev/null
+ # if [ $? -eq 0 ]; then echo 'OK' >&2; else echo 'NG!' >&2; finish 1; fi
+ #fi
  if [ -e lang_de.bin ]; then
   echo -n " German : " >&2
   ./update_lang.sh de 2>./update_lang_de.out 1>/dev/null
@@ -158,18 +158,18 @@ else
   ./update_lang.sh fr 2>./update_lang_fr.out 1>/dev/null
   if [ $? -eq 0 ]; then echo 'OK' >&2; else echo 'NG!' >&2; finish 1; fi
  fi
- if [ -e lang_pl.bin ]; then
-  echo -n " Polish : " >&2
-  ./update_lang.sh pl 2>./update_lang_pl.out 1>/dev/null
-  if [ $? -eq 0 ]; then echo 'OK' >&2; else echo 'NG!' >&2; finish 1; fi
- fi
+ #if [ -e lang_pl.bin ]; then
+ # echo -n " Polish : " >&2
+ # ./update_lang.sh pl 2>./update_lang_pl.out 1>/dev/null
+ # if [ $? -eq 0 ]; then echo 'OK' >&2; else echo 'NG!' >&2; finish 1; fi
+ #fi
 #Community language support
 #Dutch
- if [ -e lang_nl.bin ]; then
-  echo -n " Dutch  : " >&2
-  ./update_lang.sh nl 2>./update_lang_nl.out 1>/dev/null
-  if [ $? -eq 0 ]; then echo 'OK' >&2; else echo 'NG!' >&2; fi
- fi
+ #if [ -e lang_nl.bin ]; then
+ # echo -n " Dutch  : " >&2
+ # ./update_lang.sh nl 2>./update_lang_nl.out 1>/dev/null
+ # if [ $? -eq 0 ]; then echo 'OK' >&2; else echo 'NG!' >&2; fi
+ #fi
 
 #Use the 6 lines below as a template and replace 'qr' and 'New language'
 #New language

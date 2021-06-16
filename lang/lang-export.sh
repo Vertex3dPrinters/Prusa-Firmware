@@ -16,15 +16,15 @@ if [ -z "$LNG" ]; then LNG=all; fi
 # if 'all' is selected, script will generate all po files and also pot file
 if [ "$LNG" = "all" ]; then
  ./lang-export.sh en
- ./lang-export.sh cz
+ #./lang-export.sh cz
  ./lang-export.sh de
  ./lang-export.sh es
  ./lang-export.sh fr
  ./lang-export.sh it
- ./lang-export.sh pl
+ #./lang-export.sh pl
 #Community language support
 #Dutch
- ./lang-export.sh nl
+ #./lang-export.sh nl
 #Use the 2 lines below as a template and replace 'qr' and 'New language'
 ##New language
 # ./lang-export.sh qr

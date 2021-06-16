@@ -3151,14 +3151,14 @@ void mbl_settings_init() {
 //3x3 mesh; 3 Z-probes on each point, magnet elimination on
 //magnet elimination: use aaproximate Z-coordinate instead of measured values for points which are near magnets
 	if (eeprom_read_byte((uint8_t*)EEPROM_MBL_MAGNET_ELIMINATION) == 0xFF) {
-		eeprom_update_byte((uint8_t*)EEPROM_MBL_MAGNET_ELIMINATION, 1);
+		eeprom_update_byte((uint8_t*)EEPROM_MBL_MAGNET_ELIMINATION, 0);
 	}
 	if (eeprom_read_byte((uint8_t*)EEPROM_MBL_POINTS_NR) == 0xFF) {
-		eeprom_update_byte((uint8_t*)EEPROM_MBL_POINTS_NR, 3);
+		eeprom_update_byte((uint8_t*)EEPROM_MBL_POINTS_NR, 7);
 	}
 	mbl_z_probe_nr = eeprom_read_byte((uint8_t*)EEPROM_MBL_PROBE_NR);
 	if (mbl_z_probe_nr == 0xFF) {
-		mbl_z_probe_nr = 3;
+		mbl_z_probe_nr = 5;
 		eeprom_update_byte((uint8_t*)EEPROM_MBL_PROBE_NR, mbl_z_probe_nr);
 	}
 }
