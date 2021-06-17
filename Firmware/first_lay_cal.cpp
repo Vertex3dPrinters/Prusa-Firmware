@@ -56,10 +56,12 @@ void lay1cal_load_filament(char *cmd_buffer, uint8_t filament)
 void lay1cal_set_flow()
 {
     uint8_t nDiameter_um;
-    nDiameter_um=eeprom_read_word((uint16_t*)EEPROM_NOZZLE_DIAMETER_uM);
+    nDiameter_um=eeprom_read_word((uint16_t*)EEPROM_NOZZLE_DIAMETER);
 
     char cmd[12];
-    sprintf_P(cmd, PSTR("M221 S%d"), (uint8_t)(nDiameter_um/40*10));
+    char buffnr[6];
+    dtostrf((double)(nDiameter_um/0.4),3,2,buffnr);
+    sprintf_P(cmd, PSTR("M221 S%s"), buffnr);
     enquecommand(cmd);
 
     // switch (nDiameter_um)
