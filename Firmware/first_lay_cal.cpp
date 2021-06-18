@@ -209,20 +209,12 @@ void lay1cal_meander(char *cmd_buffer)
 
     for(y=1;y<6;y++)
     {
-        if(x==0)
-        {
-            sprintf_P(cmd_buffer, PSTR( "G1 X%-2.f Y%-.2f E%-.3f"), xPos1ly[x], yPos1ly[y] , extrY);
-            enquecommand(cmd_buffer);
-            x++;
-            sprintf_P(cmd_buffer, PSTR( "G1 X%-2.f Y%-.2f E%-.3f"), xPos1ly[x], yPos1ly[y] , extrX);
-            enquecommand(cmd_buffer);
-        }else{
-            sprintf_P(cmd_buffer, PSTR( "G1 X%-2.f Y%-.2f E%-.3f"), xPos1ly[x], yPos1ly[y] , extrY);
-            enquecommand(cmd_buffer);
-            x--;
-            sprintf_P(cmd_buffer, PSTR( "G1 X%-2.f Y%-.2f E%-.3f"), xPos1ly[x], yPos1ly[y] , extrX);
-            enquecommand(cmd_buffer);
-        }
+        sprintf_P(cmd_buffer, PSTR( "G1 X%-2.f Y%-.2f E%-.3f"), xPos1ly[x], yPos1ly[y] , extrY);
+        enquecommand(cmd_buffer);
+        if (x==0) x++; else x--;
+        sprintf_P(cmd_buffer, PSTR( "G1 X%-2.f Y%-.2f E%-.3f"), xPos1ly[x], yPos1ly[y] , extrX);
+        enquecommand(cmd_buffer);
+       
     }
     sprintf_P(cmd_buffer, PSTR("G1 X20 Y35 E%-.3f"), extr);
     enquecommand(cmd_buffer);
