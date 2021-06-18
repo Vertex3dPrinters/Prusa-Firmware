@@ -1188,6 +1188,7 @@ void lcd_commands()
                 lcd_commands_step = 11;
                 break;
             case 11:
+				lay1cal_set_flow();
                 lay1cal_wait_preheat();
                 lcd_commands_step = 10;
                 break;
@@ -1199,7 +1200,6 @@ void lcd_commands()
                 lcd_clear();
                 menu_depth = 0;
                 menu_submenu(lcd_babystep_z);
-				lay1cal_set_flow();
                 lay1cal_intro_line();
                 lcd_commands_step = 8;
                 break;
