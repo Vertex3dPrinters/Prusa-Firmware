@@ -9169,7 +9169,7 @@ void setVertexValues()
     
 	eeprom_update_byte((uint8_t*)EEPROM_FSENSOR_ACTION_NA,(uint8_t)oFsensorActionNA);
 	eeprom_update_byte((uint8_t*)EEPROM_MBL_POINTS_NR, 7);
-	eeprom_update_byte((uint8_t*)EEPROM_MBL_MAGNET_ELIMINATION, 0);
+	eeprom_update_byte((uint8_t*)EEPROM_MBL_MAGNET_ELIMINATION, 1);
 	eeprom_update_byte((uint8_t*)EEPROM_MBL_PROBE_NR, 5);
 }
 
