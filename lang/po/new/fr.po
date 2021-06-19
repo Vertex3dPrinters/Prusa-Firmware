@@ -1765,3 +1765,17 @@ msgstr "Correct-Z:"
 msgid "Z-probe nr."
 msgstr "Mesurer x-fois"
 
+#MSG_CHOOSE_NOZZLE c=32
+#: messages.c:162
+msgid "Choose the nozzle size:"
+msgstr "Choisissez la taille de la buse:"
+
+#MSG_REPRINT c=12
+#: messages.c:163
+msgid "Reprint"
+msgstr "Reimpression"
+
+#MSG_CHECK_STEEL_SHEET c=34
+#: messages.c:161
+msgid "Check the steel sheet installed"
+msgstr "Verifier la tole d'acier installee"

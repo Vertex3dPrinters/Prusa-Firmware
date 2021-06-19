@@ -1401,3 +1401,15 @@
 #MSG_PRINTER_IP c=18
 "Printer IP Addr:"
 "Drucker IP Adr.:"
+
+#MSG_CHOOSE_NOZZLE c=26
+"Choose the nozzle size:"
+"Wahlen Sie die Dusengrose:"
+
+#MSG_REPRINT c=7
+"Reprint"
+"Abdruck"
+
+#MSG_CHECK_STEEL_SHEET c=42
+"Check the steel sheet installed"
+"Uberprufen Sie das installierte Stahlblech"

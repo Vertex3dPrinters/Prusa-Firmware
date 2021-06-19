@@ -1765,3 +1765,17 @@ msgstr "Correzione-Z:"
 msgid "Z-probe nr."
 msgstr "Nr. Z-test"
 
+#MSG_CHOOSE_NOZZLE c=33
+#: messages.c:162
+msgid "Choose the nozzle size:"
+msgstr "Scegli la dimensione dell'ugello:"
+
+#MSG_REPRINT c=10
+#: messages.c:163
+msgid "Reprint"
+msgstr "Ristampare"
+
+#MSG_CHECK_STEEL_SHEET c=43
+#: messages.c:161
+msgid "Check the steel sheet installed"
+msgstr "Controllare la lamiera d'acciaio installata"
