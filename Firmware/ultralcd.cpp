@@ -4876,7 +4876,11 @@ void lcd_wizard(WizState state)
 			else end = true;
 			break;
 		case S::SelectNozzle:
-			wizard_event = lcd_show_fullscreen_message_two_choices_wait_P(_T(MSG_CHOOSE_NOZZLE),false,false,MSG_NOZZLE_04,MSG_NOZZLE_06);
+			if (PRINTER_TYPE == PRINTER_VERTEX_XL)  {
+				wizard_event = lcd_show_fullscreen_message_two_choices_wait_P(_T(MSG_CHOOSE_NOZZLE),false,false,MSG_NOZZLE_04,MSG_NOZZLE_06);
+			}else{
+				wizard_event = lcd_show_fullscreen_message_two_choices_wait_P(_T(MSG_CHOOSE_NOZZLE),false,true,MSG_NOZZLE_04,MSG_NOZZLE_06);
+			}
 			lcd_choose_nozzle_diameter(wizard_event);
 			state = S::VertexValues;
 			break;
@@ -9164,9 +9168,9 @@ void setVertexValues()
 	oFsensorActionNA=ClFsensorActionNA::_Pause;
     
 	eeprom_update_byte((uint8_t*)EEPROM_FSENSOR_ACTION_NA,(uint8_t)oFsensorActionNA);
-	eeprom_update_byte((uint8_t*)EEPROM_MBL_POINTS_NR, 7);
-	eeprom_update_byte((uint8_t*)EEPROM_MBL_MAGNET_ELIMINATION, 1);
-	eeprom_update_byte((uint8_t*)EEPROM_MBL_PROBE_NR, 5);
+	//eeprom_update_byte((uint8_t*)EEPROM_MBL_POINTS_NR, 7);
+	//eeprom_update_byte((uint8_t*)EEPROM_MBL_MAGNET_ELIMINATION, 1);
+	//eeprom_update_byte((uint8_t*)EEPROM_MBL_PROBE_NR, 5);
 }
 
 #ifdef PINDA_TEMP_COMP
