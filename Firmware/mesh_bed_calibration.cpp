@@ -98,7 +98,7 @@ const float bed_ref_points_4[] PROGMEM = {
 /**
  * [0,0] bed print area point Y coordinate in bed coordinates ver. 05d/24V
  */
-#define BED_PRINT_ZERO_REF_Y 2.4f
+#define BED_PRINT_ZERO_REF_Y 13.4f
 
 const float bed_ref_points_4[] PROGMEM = {
 	FL_CAL_POINT_X_POSITION - BED_PRINT_ZERO_REF_X - X_PROBE_OFFSET_FROM_EXTRUDER - SHEET_PRINT_ZERO_REF_X,

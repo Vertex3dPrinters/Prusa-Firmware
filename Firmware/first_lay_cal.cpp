@@ -10,7 +10,7 @@
 #include "cmdqueue.h"
 #include "mmu.h"
 #include <avr/pgmspace.h>
-#include "conv2str.h"
+#include "util.h"
 
 //! @brief Wait for preheat
 void lay1cal_wait_preheat()
@@ -54,39 +54,6 @@ void lay1cal_load_filament(char *cmd_buffer, uint8_t filament)
 
 }
 
-void lay1cal_set_flow()
-{
-    uint8_t nDiameter;
-    nDiameter=eeprom_read_byte((uint8_t*)EEPROM_NOZZLE_DIAMETER);
-
-    char cmd[12];
-    sprintf_P(cmd, PSTR("M221 S%s"), ftostr32((float)(nDiameter/0.4)));
-    enquecommand(cmd);
-
-    // switch (nDiameter)
-    // {
-    // case 25:
-    //     enquecommand_P(PSTR("M221 S62"));
-    //     break;
-
-    // case 40:
-    //     enquecommand_P(PSTR("M221 S100"));
-    //     break;
-    
-    // case 60:
-    //     enquecommand_P(PSTR("M221 S150"));
-    //     break;
-
-    // case 80:
-    //     enquecommand_P(PSTR("M221 S200"));
-    //     break; 
-
-    // default:
-    //     enquecommand_P(PSTR("M221 S100"));
-    //     break;
-    // }
-    
-}
 
 //! @brief Print intro line
 void lay1cal_intro_line()
@@ -239,4 +206,25 @@ void lay1cal_square(char *cmd_buffer, uint8_t i)
     enquecommand(cmd_buffer);
     sprintf_P(cmd_buffer, fmt2, (35 - (i + 1)*width * 2), extr_short_segment);
     enquecommand(cmd_buffer);
+}
+
+void lay1cal_set_flow()
+{    
+    ClNozzleDiameter nDiameter=(ClNozzleDiameter)eeprom_read_byte((uint8_t*)EEPROM_NOZZLE_DIAMETER);
+
+    switch(nDiameter){
+    case ClNozzleDiameter::_Diameter_250:
+        enquecommand_P(PSTR("M221 S62"));
+        break;
+    case ClNozzleDiameter::_Diameter_Undef:
+    case ClNozzleDiameter::_Diameter_400:
+        enquecommand_P(PSTR("M221 S100"));
+        break;
+    case ClNozzleDiameter::_Diameter_600:
+        enquecommand_P(PSTR("M221 S150"));
+        break;
+    case ClNozzleDiameter::_Diameter_800:
+        enquecommand_P(PSTR("M221 S200"));
+        break;
+    }    
 }

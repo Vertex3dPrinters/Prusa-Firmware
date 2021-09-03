@@ -68,8 +68,8 @@
 // Travel limits after homing
 #define X_MAX_POS 302
 #define X_MIN_POS 0
-#define Y_MAX_POS 311
-#define Y_MIN_POS -8 //orig -8
+#define Y_MAX_POS 305.6
+#define Y_MIN_POS -13.4 //orig -8
 #define Z_MAX_POS 430
 #define Z_MIN_POS 0.15
 
@@ -93,7 +93,7 @@
 /**
  * [0,0] steel sheet print area point Y coordinate in bed print area coordinates
  */
-#define SHEET_PRINT_ZERO_REF_Y 5.5f
+#define SHEET_PRINT_ZERO_REF_Y 0.f
 
 #define DEFAULT_MAX_FEEDRATE                {200, 200, 12, 120}      // (mm/sec)   max feedrate (M203)
 #define DEFAULT_MAX_FEEDRATE_SILENT         {100, 100, 12, 120}      // (mm/sec)   max feedrate (M203), silent mode
@@ -117,7 +117,7 @@
 #define NORMAL_MAX_FEEDRATE_XY   200  // max feedrate in mm/s
 
 //number of bytes from end of the file to start check
-#define END_FILE_SECTION 20000
+#define END_FILE_SECTION 28000
 
 #define Z_AXIS_ALWAYS_ON 1
 
@@ -660,6 +660,7 @@
 #define FR_CAL_POINT_Y_POSITION 37.3f
 #define RL_CAL_POINT_Y_POSITION 292.0f
 #define RR_CAL_POINT_Y_POSITION 292.0f
+
 
 //values for pinda position over calibration points
 // #define FL_PINDA_CAL_X_POSITION 1550

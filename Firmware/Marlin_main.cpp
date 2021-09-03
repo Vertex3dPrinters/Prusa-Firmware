@@ -797,6 +797,9 @@ void lcd_splash()
   if (PRINTER_TYPE == PRINTER_VERTEX_XL)
   {
 	  lcd_puts_P(PSTR("\n     VERTEX  XL\n    vertex3d.org"));
+  }else if (PRINTER_TYPE == PRINTER_VERTEX_L)
+  {
+	  lcd_puts_P(PSTR("\n     VERTEX  L\n    vertex3d.org"));
   }else{
     lcd_puts_P(PSTR("\n    VERTEX MK3S+\n    vertex3d.org"));
   }
@@ -2241,6 +2244,9 @@ bool calibrate_z_auto()
 	}
   else if (PRINTER_TYPE == PRINTER_VERTEX_XL) {
     current_position[Z_AXIS] = Z_MAX_POS + 7.0;
+  }
+  else if (PRINTER_TYPE == PRINTER_VERTEX_L) {
+    current_position[Z_AXIS] = Z_MAX_POS + 3.0;
   }
 	else {
 		current_position[Z_AXIS] = Z_MAX_POS + 9.0;
