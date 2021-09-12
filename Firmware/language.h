@@ -88,16 +88,16 @@ typedef struct
 ///@{
 #define LANG_CODE_XX 0x3f3f //!<'??'
 #define LANG_CODE_EN 0x656e //!<'en'
-#define LANG_CODE_CZ 0x6373 //!<'cs'
+//#define LANG_CODE_CZ 0x6373 //!<'cs'
 #define LANG_CODE_DE 0x6465 //!<'de'
 #define LANG_CODE_ES 0x6573 //!<'es'
 #define LANG_CODE_FR 0x6672 //!<'fr'
 #define LANG_CODE_IT 0x6974 //!<'it'
-#define LANG_CODE_PL 0x706c //!<'pl'
+//#define LANG_CODE_PL 0x706c //!<'pl'
 #ifdef COMMUNITY_LANG_SUPPORT //Community language support
-#ifdef COMMUNITY_LANG_NL
-#define LANG_CODE_NL 0x6e6c //!<'nl'
-#endif // COMMUNITY_LANG_NL
+//#ifdef COMMUNITY_LANG_NL
+//#define LANG_CODE_NL 0x6e6c //!<'nl'
+//#endif // COMMUNITY_LANG_NL
 //Use the 3 lines below as a template and replace 'QR', '0X7172' and 'qr'
 //#ifdef COMMUNITY_LANG_QR
 //#define LANG_CODE_QR 0x7172 //!<'qr'

@@ -184,15 +184,15 @@ fi
 
 #create binary file with all languages
 rm -f lang.bin
-if [ -e lang_cz.bin ]; then cat lang_cz.bin >> lang.bin; fi
+#if [ -e lang_cz.bin ]; then cat lang_cz.bin >> lang.bin; fi
 if [ -e lang_de.bin ]; then cat lang_de.bin >> lang.bin; fi
 if [ -e lang_es.bin ]; then cat lang_es.bin >> lang.bin; fi
 if [ -e lang_fr.bin ]; then cat lang_fr.bin >> lang.bin; fi
 if [ -e lang_it.bin ]; then cat lang_it.bin >> lang.bin; fi
-if [ -e lang_pl.bin ]; then cat lang_pl.bin >> lang.bin; fi
+#if [ -e lang_pl.bin ]; then cat lang_pl.bin >> lang.bin; fi
 #Community language support
 # Dutch
-if [ -e lang_nl.bin ]; then cat lang_nl.bin >> lang.bin; fi
+#if [ -e lang_nl.bin ]; then cat lang_nl.bin >> lang.bin; fi
 
 #Use the 2 lines below as a template and replace 'qr'
 ## New language

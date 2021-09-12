@@ -37,15 +37,15 @@ lang_code_hex_data()
 {
  case "$1" in
   *en*) echo '\x6e\x65' ;;
-  *cz*) echo '\x73\x63' ;;
+  #*cz*) echo '\x73\x63' ;;
   *de*) echo '\x65\x64' ;;
   *es*) echo '\x73\x65' ;;
   *fr*) echo '\x72\x66' ;;
   *it*) echo '\x74\x69' ;;
-  *pl*) echo '\x6c\x70' ;;
+  #*pl*) echo '\x6c\x70' ;;
 #Community language support
 #Dutch
-  *nl*) echo '\x6c\x6e' ;;
+  #*nl*) echo '\x6c\x6e' ;;
 #Use the 2 lines below as a template and replace 'qr' and `\x71\x72`
 ##New language
 #  *qr*) echo '\x71\x72' ;;

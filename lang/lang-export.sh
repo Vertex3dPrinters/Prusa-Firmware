@@ -48,15 +48,15 @@ else
  # language name in english
  LNGNAME=$(\
   case "$LNG" in
-   *cz*) echo "Czech" ;;
+   #*cz*) echo "Czech" ;;
    *de*) echo "German" ;;
    *es*) echo "Spanish" ;;
    *fr*) echo "French" ;;
    *it*) echo "Italian" ;;
-   *pl*) echo "Polish" ;;
+   #*pl*) echo "Polish" ;;
 #Community language support
 #Dutch
-   *nl*) echo "Dutch" ;;
+  # *nl*) echo "Dutch" ;;
 #Use the 2 lines below as a template and replace 'qr' and 'New language'
 ##New language
 #   *qr*) echo "New language" ;;

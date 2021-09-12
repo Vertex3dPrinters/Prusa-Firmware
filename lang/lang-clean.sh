@@ -48,7 +48,7 @@ clean_lang it
 #clean_lang pl
 #Community language support
 #Dutch
-clean_lang nl
+#clean_lang nl
 
 #Use the 2 lines below as a template and replace 'qr'
 ##New language
