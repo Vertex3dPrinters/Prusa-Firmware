@@ -652,22 +652,14 @@
 #define HEATBED_CS
 
 //float value from the edge of the bed until center of circle in mm, must be float
-// #define FL_CAL_POINT_X_POSITION 38.5f 
-// #define FR_CAL_POINT_X_POSITION 263.0f
-// #define RL_CAL_POINT_X_POSITION 38.5f
-// #define RR_CAL_POINT_X_POSITION 263.0f
-// #define FL_CAL_POINT_Y_POSITION 37.3f
-// #define FR_CAL_POINT_Y_POSITION 37.3f
-// #define RL_CAL_POINT_Y_POSITION 292.0f
-// #define RR_CAL_POINT_Y_POSITION 292.0f
-#define FL_CAL_POINT_X_POSITION 42.5f 
-#define FR_CAL_POINT_X_POSITION 267.0f
-#define RL_CAL_POINT_X_POSITION 42.5f
-#define RR_CAL_POINT_X_POSITION 267.0f
-#define FL_CAL_POINT_Y_POSITION 41.3f
-#define FR_CAL_POINT_Y_POSITION 41.3f
-#define RL_CAL_POINT_Y_POSITION 296.0f
-#define RR_CAL_POINT_Y_POSITION 296.0f
+#define FL_CAL_POINT_X_POSITION 38.5f 
+#define FR_CAL_POINT_X_POSITION 263.0f
+#define RL_CAL_POINT_X_POSITION 38.5f
+#define RR_CAL_POINT_X_POSITION 263.0f
+#define FL_CAL_POINT_Y_POSITION 37.3f
+#define FR_CAL_POINT_Y_POSITION 37.3f
+#define RL_CAL_POINT_Y_POSITION 292.0f
+#define RR_CAL_POINT_Y_POSITION 292.0f
 
 
 //values for pinda position over calibration points

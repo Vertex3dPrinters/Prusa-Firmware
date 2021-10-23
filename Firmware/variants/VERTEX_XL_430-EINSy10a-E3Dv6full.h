@@ -652,6 +652,7 @@
 #define HEATBED_CS
 
 //float value from the edge of the bed until center of circle in mm, must be float
+
 #define FL_CAL_POINT_X_POSITION 38.5f 
 #define FR_CAL_POINT_X_POSITION 263.0f
 #define RL_CAL_POINT_X_POSITION 38.5f
@@ -661,16 +662,6 @@
 #define RL_CAL_POINT_Y_POSITION 292.0f
 #define RR_CAL_POINT_Y_POSITION 292.0f
 
-
-//values for pinda position over calibration points
-// #define FL_PINDA_CAL_X_POSITION 1550
-// #define FR_PINDA_CAL_X_POSITION 24000
-// #define RL_PINDA_CAL_X_POSITION 1550
-// #define RR_PINDA_CAL_X_POSITION 24000
-// #define FL_PINDA_CAL_Y_POSITION 2930
-// #define FR_PINDA_CAL_Y_POSITION 2930
-// #define RL_PINDA_CAL_Y_POSITION 28400
-// #define RR_PINDA_CAL_Y_POSITION 28400
 
 //values to be adapted to pass the selftest
 #define AXIS_MARGIN 60
