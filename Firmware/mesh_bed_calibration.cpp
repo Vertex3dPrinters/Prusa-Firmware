@@ -1103,7 +1103,7 @@ BedSkewOffsetDetectionResultType xyzcal_find_bed_induction_sensor_point_xy();
 #define FIND_BED_INDUCTION_SENSOR_POINT_Z_STEP   (0.2f)
 #endif //HEATBED_V2
 
-#ifdef HEATBED_V2 || defined(HEATBED_CS)
+#if defined(HEATBED_V2) || defined(HEATBED_CS)
 BedSkewOffsetDetectionResultType find_bed_induction_sensor_point_xy(int
 #if !defined (NEW_XYZCAL) && defined (SUPPORT_VERBOSITY)
         verbosity_level
