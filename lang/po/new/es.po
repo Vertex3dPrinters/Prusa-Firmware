@@ -1765,3 +1765,12 @@ msgstr "Corregir-Z:"
 msgid "Z-probe nr."
 msgstr "Z-sensor nr."
 
+#MSG_REPRINT c=10
+#: messages.c:164
+msgid "Reprint"
+msgstr "Reimprimir"
+
+#MSG_CHECK_STEEL_SHEET c=31 r=2
+#: messages.c:165
+msgid "Check the steel sheet installed"
+msgstr "Comprueba la plancha instalada"
