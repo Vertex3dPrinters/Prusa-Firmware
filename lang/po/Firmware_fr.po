@@ -1770,7 +1770,7 @@ msgstr "Mesurer x-fois"
 msgid "Reprint"
 msgstr "Reimpression"
 
-#MSG_CHECK_STEEL_SHEET c=34
+#MSG_CHECK_STEEL_SHEET c=35
 #: messages.c:165
-msgid "Check the steel sheet installed"
-msgstr "Verifier la tole d'acier installee"
+msgid "Check the selected steel sheet:"
+msgstr "Verifier la tole d'acier installee:"

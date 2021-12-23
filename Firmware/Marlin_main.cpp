@@ -7066,6 +7066,7 @@ Sigma_Exit:
 	- U - Firmware version provided by G-code to be compared to current one.  
 	*/
 	case 115: // M115
+      steel_sheet_check();
       if (code_seen('V')) {
           // Report the Prusa version number.
           SERIAL_PROTOCOLLNRPGM(FW_VERSION_STR_P());
@@ -8470,7 +8471,6 @@ Sigma_Exit:
           switch((ClPrintChecking)nCommand)
                {
                case ClPrintChecking::_Nozzle:     // ~ .1
-                    steel_sheet_check();
                     uint16_t nDiameter;
                     if(code_seen('P'))
                          {
